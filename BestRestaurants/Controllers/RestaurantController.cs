@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using BestRestaurants.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace BestRestaurants.Controllers
@@ -27,7 +27,7 @@ namespace BestRestaurants.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create (Restaurant restaurant)
+    public ActionResult Create(Restaurant restaurant)
     {
       _db.Restaurants.Add(restaurant);
       _db.SaveChanges();
