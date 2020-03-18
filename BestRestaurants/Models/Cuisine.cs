@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using System;
 
-namespace BestRestaurant.Models
+namespace BestRestaurants.Models
 {
   public class Cuisine
     {
@@ -11,6 +12,6 @@ namespace BestRestaurant.Models
 
         public int CuisineId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Restaurants> Restaurants { get; set; }
+        public virtual ICollection<Restaurant> Restaurants { get; set; }
     }
 }

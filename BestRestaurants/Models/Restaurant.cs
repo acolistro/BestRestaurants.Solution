@@ -1,4 +1,7 @@
-namespace BestRestaurant.Models
+using System.Collections.Generic;
+using System;
+
+namespace BestRestaurants.Models
 {
   public class Restaurant
   {
