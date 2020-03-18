@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BestRestaurants.Controllers
 {
-  public class RestaurantController : Controller
+  public class RestaurantsController : Controller
   {
     private readonly BestRestaurantsContext _db;
 
-    public RestaurantController(BestRestaurantsContext db)
+    public RestaurantsController(BestRestaurantsContext db)
     {
       _db = db;
     }
