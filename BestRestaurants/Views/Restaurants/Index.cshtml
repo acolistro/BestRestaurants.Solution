@@ -3,6 +3,7 @@
 }
 
 @using BestRestaurants.Models;
+@using System.Collections.Generic;
 @model List<BestRestaurants.Models.Restaurant>;
 
 <h1>Restaurants</h1>
@@ -19,3 +20,5 @@
 </ul>
 
 <p>@Html.ActionLink("Add new restaurant", "Create")</p>
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

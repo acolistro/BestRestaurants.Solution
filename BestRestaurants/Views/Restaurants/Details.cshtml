@@ -1,1 +1,16 @@
-<h1>Details</h1>
+@{
+  Layout = "_Layout";
+}
+
+@using BestRestaurants.Models
+@model BestRestaurants.Models.Restaurant
+
+<h2>Restaurant Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<p>
+@* <h4>@Html.DisplayNameFor(model => model.Category): @Html.DisplayFor(model => model.Category)</h4> *@
+<h4>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)</h4>
+
+<p>@Html.ActionLink("Back to List", "Index")</p>
