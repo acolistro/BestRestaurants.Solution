@@ -26,5 +26,15 @@ namespace BestRestaurants.Controllers
     {
       return View();
     }
+
+    [HttpPost]
+    public ActionResult Create(Cuisine cuisine)
+    {
+      _db.Cuisines.Add(cuisine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    
   }
 }
