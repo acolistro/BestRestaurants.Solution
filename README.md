@@ -14,7 +14,7 @@ _A website where users can add their favorite restaurants based on the type of c
 | ------------- |:-------------:| -------------------:|
 |User can can choose to add a new cuisine| "Mongolian Street Food"| "Mongolian Street Food" is added to the cuisine database|
 |User can view all cuisines|Selects "view all"|All cuisines in the cuisine table of the database are printed to the page|
-|User can view all restaurants of each cuisine|Clicks a cuisine|All restaurants belonging to that cuisine type are displayed.|
+|User can view all restaurants of each cuisine|Clicks "Mongolian Street Food"|All restaurants that serve "Mongolian Street Food" are displayed.|
 |User can edit added cuisines|"Mongolian Street Food" --> "Szechuan Street Food"|"Mongolian Street Food" is updated to "Szechuan Street Food" in the cuisine table|
 |User can delete cuisines|User selects "Delete" from options on "Szechuan Street Food" Details page|"Szechuan Street Food" is removed from the cuisines table.|
 |User can add a new restaurant and specify which cuisine it belongs to, as well as other restaurant details.|"Lucky Strike", "Szechuan Street Food"|"Lucky Strike" is added to the restaurants table, with the idea of the specified cuisine in a cuisine column.|
@@ -100,6 +100,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _ASP.NET Core MVC_
 * _dotnet script_
 * _MySQL_
+* _EF Core_
 
 ### License
 
