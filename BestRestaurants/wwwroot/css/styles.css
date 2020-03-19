@@ -1,9 +1,5 @@
 
 body {
-  /* background-image: url("../img/picnic_table.jpeg"); */
-  background-repeat: no-repeat;
-  background-position: fixed;
-  background-size: cover;
   text-align: center;
   font-family: Josefin Sans;
 }
@@ -11,13 +7,16 @@ body {
 body::after {
   content: "";
   background: url("../img/picnic_table.jpeg");
-  opacity: 0.5;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: -1;   
+  z-index: -1;  
 }
 
 img {
@@ -26,14 +25,23 @@ img {
 
 a {
   font-size: 25px;
-  background-color: white;
   padding: 8px;
+  color: white;
 }
 .jumbotron {
   text-align: center;
   margin-top: 15px;
-  background: rgba(0, 0, 0, 0.6);
-        color: #fff;
+  background: rgba(0, 0, 0, .1);
+  color: #fff;
+  text-shadow: -1px 1px 0 #000,
+				  1px 1px 0 #000,
+				 1px -1px 0 #000;
+				-1px -1px 0 #000;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
 }
 
 div#footer {
@@ -48,6 +56,17 @@ div#footer {
 
 .navbar-brand {
   font-family: Pacifico;
-  color: coral;
+  color: darkgoldenrod;
   font-size: 25px;
+}
+
+.btn button{
+  color: white;
+}
+
+.button-group {
+  position: fixed;
+  bottom: 175px;
+  text-align: center;
+  margin-left: 16vw;
 }
