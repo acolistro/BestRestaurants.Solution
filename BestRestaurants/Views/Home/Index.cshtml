@@ -2,11 +2,14 @@
   Layout = "_Layout";
 }
 <div class="jumbotron">
-  <h1>Welcome to the Best Restaurant Tracker!</h1>
+  <h1 class=splash-page-header>Welcome to Best Restaurant!</h1>
+  <h2>A restaurant finder to suit your taste.</h2>
 </div>
-<div class="button-group">
-  <button class="btn btn-warning">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
-  <button class="btn btn-warning">@Html.ActionLink("Add a new cuisine", "Create", "Cuisines")</button>
-  <button class="btn btn-warning">@Html.ActionLink("See all restaurants", "Index", "Restaurants")</button>
-  <button class="btn btn-warning">@Html.ActionLink("Add a new restaurant", "Create", "Restaurants")</button>
+<div class="button-parent">
+  <div class="button-group">
+    <button class="btn btn-warning">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
+    <button class="btn btn-warning">@Html.ActionLink("Add a new cuisine", "Create", "Cuisines")</button>
+    <button class="btn btn-warning">@Html.ActionLink("See all restaurants", "Index", "Restaurants")</button>
+    <button class="btn btn-warning">@Html.ActionLink("Add a new restaurant", "Create", "Restaurants")</button>
+  </div>
 </div>
