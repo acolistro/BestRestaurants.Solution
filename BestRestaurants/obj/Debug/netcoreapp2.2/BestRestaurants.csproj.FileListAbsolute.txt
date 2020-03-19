@@ -33,3 +33,4 @@
 /Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.dll
 /Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.pdb
 /Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/BestRestaurants.csproj.CopyComplete
+/Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/obj/Debug/netcoreapp2.2/Razor/Views/Cuisines/Search.g.cshtml.cs
