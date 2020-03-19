@@ -1,12 +1,22 @@
 @{
   Layout = "_Layout";
 }
+
 <div class="jumbotron">
   <h1 class=splash-page-header>Welcome to Best Restaurant!</h1>
   <h2>A restaurant finder to suit your taste.</h2>
 </div>
+
+
 <div class="button-parent">
   <div class="button-group">
+  
+  <div class="form-group w-50" id="search">
+  @using (Html.BeginForm("search","Animals")) {
+  <input type="text" name="search" class="form-control form-control-lg"/>
+  <input type="submit" value="search" class="btn btn-success my-2 my-sm-0">
+  }
+</div>
     <button class="btn btn-warning">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
     <button class="btn btn-warning">@Html.ActionLink("Add a new cuisine", "Create", "Cuisines")</button>
     <button class="btn btn-warning">@Html.ActionLink("See all restaurants", "Index", "Restaurants")</button>
