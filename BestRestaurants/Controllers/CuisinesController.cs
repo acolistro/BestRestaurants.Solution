@@ -71,7 +71,7 @@ namespace BestRestaurants.Controllers
     }
     public ActionResult Search(string search)
     {
-      List<Cuisine> model = _db.Cuisines.Where(cuisine => cuisine.Name == search).ToList();
+      List<Cuisine> model = _db.Cuisines.Where(cuisine => cuisine.Name.Contains(search).ToList();
       return View(model);
     }
   }

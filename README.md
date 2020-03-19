@@ -4,6 +4,8 @@
 
 #### By _**Alyssa Colistro, Rachel Schieferstein, K Wicz**_
 
+![Landing Page Preview](/BestRestaurants/wwwroot/img/splash-page.png)
+
 ## Description
 
 _A website where users can add their favorite restaurants based on the type of cuisine they offer._
