@@ -12150,23 +12150,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\viole\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/katysolovewicz/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\viole\\Desktop\\BestRestaurants.Solution\\BestRestaurants\\BestRestaurants.csproj",
+      "projectUniqueName": "/Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
       "projectName": "BestRestaurants",
-      "projectPath": "C:\\Users\\viole\\Desktop\\BestRestaurants.Solution\\BestRestaurants\\BestRestaurants.csproj",
-      "packagesPath": "C:\\Users\\viole\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\viole\\Desktop\\BestRestaurants.Solution\\BestRestaurants\\obj\\",
+      "projectPath": "/Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/BestRestaurants.csproj",
+      "packagesPath": "/Users/katysolovewicz/.nuget/packages/",
+      "outputPath": "/Users/katysolovewicz/Projects/epicodus/c#/BestRestaurants.Solution/BestRestaurants/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\viole\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/katysolovewicz/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
