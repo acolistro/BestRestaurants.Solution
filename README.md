@@ -21,6 +21,7 @@ _A website where users can add their favorite restaurants based on the type of c
 |User can view all restaurants|Selects "view all"|User can see all restaurants listed in the restaurants table.|
 |User can edit restaurants|"Lucky Strike" --> "Unlucky Cat"|"Lucky Strike" is updated to "Unlucky Cat" in the restaraunt table.|
 |User can delete restaurants|User selects "Delete"|The row with "Unlucky Cat" is removed from the restaurants table.|
+|User can enter a query to search existing cuisines |User enters "Thai"| Search results return a link to Thai cuisine, which then can take the user to all thai restaurants |
 
 
 ## Setup/Installation Requirements

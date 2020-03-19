@@ -14,7 +14,8 @@
   <div class="form-group w-50" id="search">
   @using (Html.BeginForm("Search","Cuisines")) {
   <input type="text" name="search" class="form-control form-control-lg"/>
-  <input type="submit" value="search" class="btn btn-success my-2 my-sm-0">
+  <br>
+  <input type="submit" value="Search Cuisines" class="btn btn-success my-2 my-sm-0">
   }
 </div>
     <button class="btn btn-warning">@Html.ActionLink("See all cuisines", "Index", "Cuisines")</button>
