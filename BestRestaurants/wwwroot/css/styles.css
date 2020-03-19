@@ -1,3 +1,41 @@
+
+body {
+  /* background-image: url("../img/picnic_table.jpeg"); */
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: cover;
+  text-align: center;
+  font-family: Josefin Sans;
+}
+
+body::after {
+  content: "";
+  background: url("../img/picnic_table.jpeg");
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+img {
+  opacity: .5;
+}
+
+a {
+  font-size: 25px;
+  background-color: white;
+  padding: 8px;
+}
+.jumbotron {
+  text-align: center;
+  margin-top: 15px;
+  background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+}
+
 div#footer {
   position:fixed;
   bottom:0px;
@@ -6,4 +44,10 @@ div#footer {
   color:#CCC;
   background:#333;
   padding:8px;
+}
+
+.navbar-brand {
+  font-family: Pacifico;
+  color: coral;
+  font-size: 25px;
 }
