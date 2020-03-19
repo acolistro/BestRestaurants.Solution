@@ -6,18 +6,28 @@
 @using System.Collections.Generic;
 @model List<BestRestaurants.Models.Cuisine>;
 
-<h1>Cuisines</h1>
+<div class="jumbotron">
+  <h1>Cuisines</h1>
+</div>
 
-@if (@Model.Count == 0)
-{
-  <h3>No cuisines have been added yet!</h3>
-} 
-<ul>
-  @foreach(Cuisine cuisine in Model)
-  {
-      <li>@Html.ActionLink($"{cuisine.Name}", "Details", new { id = cuisine.CuisineId })</li>
-  }
-</ul>
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card bg-warning my-5">
+      <div class="card-body">
+        @if (@Model.Count == 0)
+        {
+          <h3>No cuisines have been added yet!</h3>
+        } 
+        <ul>
+          @foreach(Cuisine cuisine in Model)
+          {
+              <li>@Html.ActionLink($"{cuisine.Name}", "Details", new { id = cuisine.CuisineId })</li>
+          }
+        </ul>
+      </div>  
+    </div>
+  </div>
+</div>        
 
 <p>@Html.ActionLink("Add new cuisine", "Create")</p>
 

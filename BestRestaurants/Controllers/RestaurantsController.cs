@@ -72,8 +72,3 @@ namespace BestRestaurants.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
   }
-
-
-
-  }
-}
