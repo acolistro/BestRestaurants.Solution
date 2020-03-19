@@ -19,7 +19,7 @@
 
         @foreach (Restaurant restaurant in @Model.Restaurants)
         {
-          <p>Restaurant Name: @restaurant.Name</p>
+          <p>@restaurant.Name</p>
         }
 
         <p>@Html.ActionLink("Back to List", "Index")</p>

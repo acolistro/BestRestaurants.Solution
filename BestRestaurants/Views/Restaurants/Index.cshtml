@@ -23,12 +23,14 @@
             {
                 <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Cuisine.Name</li>
             }
+
+            <hr/>
+
+            <p>@Html.ActionLink("Add new restaurant", "Create")</p>
+
+            <p>@Html.ActionLink("Home", "Index", "Home")</p>
           </ul>
         </div>
       </div>
     </div>
   </div>        
-
-<p>@Html.ActionLink("Add new restaurant", "Create")</p>
-
-<p>@Html.ActionLink("Home", "Index", "Home")</p>

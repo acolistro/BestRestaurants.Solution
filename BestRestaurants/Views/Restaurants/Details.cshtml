@@ -4,13 +4,23 @@
 
 @using BestRestaurants.Models
 @model BestRestaurants.Models.Restaurant
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card bg-warning my-5">
+      <div class="card-body">
+        <h2>Restaurant Details</h2>
+        <h2>@Html.DisplayFor(model => model.Name)</h2>
+        <hr />
 
-<h2>Restaurant Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+        <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<p>
+        @* <h4>@Html.DisplayNameFor(model => model.Category): @Html.DisplayFor(model => model.Category)</h4> *@
+        <p>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)</p>
 
-<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<p>
-@* <h4>@Html.DisplayNameFor(model => model.Category): @Html.DisplayFor(model => model.Category)</h4> *@
-<h4>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)</h4>
+        <p>@Html.ActionLink("Back to List", "Index")</p>
+        <p>@Html.ActionLink("Edit This Restaurant", "Edit", new { id = Model.RestaurantId })</p>
+        <p>@Html.ActionLink("Delete This Restaurant", "Delete", new { id = Model.RestaurantId })</p>
 
-<p>@Html.ActionLink("Back to List", "Index")</p>
+      </div>
+    </div>
+  </div>
+</div>
