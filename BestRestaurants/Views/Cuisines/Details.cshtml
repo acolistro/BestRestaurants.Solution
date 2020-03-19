@@ -4,24 +4,28 @@
 
 @using BestRestaurants.Models
 @model BestRestaurants.Models.Cuisine
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card bg-warning my-5">
+      <div class="card-body">
+        <h2>Restaurants with </h2>
+        <h2>@Html.DisplayFor(model => model.Name)</h2>
+        <hr />
 
-<h2>Cuisine Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+        @if (Model.Restaurants.Count == 0)
+        {
+          <p>No restaurants of this cuisine type.</p>
+        }
 
-<ul>
-@if (Model.Restaurants.Count == 0)
-{
-  <p>No restaurants of this cuisine type.</p>
-}
+        @foreach (Restaurant restaurant in @Model.Restaurants)
+        {
+          <p>Restaurant Name: @restaurant.Name</p>
+        }
 
-@foreach (Restaurant restaurant in @Model.Restaurants)
-{
-  <li>Restaurant Name: @restaurant.Name</li>
-}
-</ul>
-
-
-<p>@Html.ActionLink("Back to List", "Index")</p>
-<p>@Html.ActionLink("Edit Cuisine", "Edit", new { id = Model.CuisineId })</p>
-<p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })</p>
+        <p>@Html.ActionLink("Back to List", "Index")</p>
+        <p>@Html.ActionLink("Edit Cuisine", "Edit", new { id = Model.CuisineId })</p>
+        <p>@Html.ActionLink("Delete Cuisine", "Delete", new { id = Model.CuisineId })</p>
+      </div>
+    </div>
+  </div>
+</div>
