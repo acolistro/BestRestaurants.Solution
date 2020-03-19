@@ -2,7 +2,7 @@
 
 #### _ASP.NET MVC practice for Epicodus_, _Mar. 19 2020_
 
-#### By _**Alyssa Colistro, Rachel Schlieferstein, Katy Solovewicz**_
+#### By _**Alyssa Colistro, Rachel Schieferstein, K Wicz**_
 
 ## Description
 
@@ -42,23 +42,56 @@ _Enter the command ``dotnet tool install -g dotnet-script`` in Terminal (macOS) 
 
 _Enter the following commands in Terminal (macOS) or PowerShell (Windows):_
 * ``cd desktop``
-* ``git clone https://github.com/michelle-morin/CarDealership.Solution``
-* ``cd CarDealership.Solution``
+* ``git clone https://github.com/kwicz/BestRestaurants``
+* ``cd BestRestaurants.Solution``
 
 _Confirm that you have navigated to the CarDealership.Solution directory (e.g., by entering the command_ ``pwd`` _in Terminal)._
 
 _Run this application by entering the following command in Terminal (macOS) or PowerShell (Windows):_
-* ``cd CarDealership``
+* ``cd BestRestaurants``
 * ``dotnet restore``
 * ``dotnet build``
 * ``dotnet run`` or ``dotnet watch run``
 
-_Test this application by entering the following command in Terminal (macOS) or PowerShell (Windows):_
-* ``cd CarDealership.Tests``
-* ``dotnet restore``
-* ``dotnet test``
 
 _To view/edit the source code of this application, open the contents of this directory in a text editor or IDE of your choice (e.g., to open all contents of the directory in Visual Studio Code on macOS, enter the command_ ``code .`` _in Terminal)._
+
+### Create Project Database
+* Navigate to your terminal and open MySQL
+```sh
+mysql -uroot -p<your_password_here>
+```
+* Once in MySQL, create a database for storing project data:
+```sh
+CREATE DATABASE `best_restaurants`;
+```
+* Create a table in best_restaurants for storing cusine data:
+```sh
+CREATE TABLE `cuisines` (
+  `cuisineid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`cuisineid`));
+```
+* Create a table in best_restaurants for storing restaurant data:
+```sh
+CREATE TABLE `restaurants` (
+  `restaurantid` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `rating` int(11) DEFAULT '0',
+  `cuisineid` int(11) DEFAULT '0',
+  PRIMARY KEY (`restaurantid`));
+```
+
+And Bon Apetit! Your project is now ready.
+
+## Known Bugs
+
+_No known bugs at this time._
+
+## Support and contact details
+
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/kwicz/bestrestaurants/issues) here on GitHub._
 
 ## Technologies Used
 * _Git_
@@ -66,11 +99,10 @@ _To view/edit the source code of this application, open the contents of this dir
 * _.NET Core 2.2_
 * _ASP.NET Core MVC_
 * _dotnet script_
-* _MSTest_
 * _MySQL_
 
 ### License
 
 *This webpage is licensed under the MIT license.*
 
-Copyright (c) 2020 **_Michelle Morin, Alyssa Colistro_**
+Copyright (c) 2020 **_Alyssa Colistro, Rachel Schieferstein, K Wicz_**
