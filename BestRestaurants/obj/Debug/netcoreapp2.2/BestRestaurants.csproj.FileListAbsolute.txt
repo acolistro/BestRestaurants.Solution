@@ -70,3 +70,4 @@ C:\Users\ThinkPad\desktop\BestRestaurants.Solution\BestRestaurants\obj\Debug\net
 C:\Users\ThinkPad\desktop\BestRestaurants.Solution\BestRestaurants\obj\Debug\netcoreapp2.2\BestRestaurants.RazorTargetAssemblyInfo.cs
 C:\Users\ThinkPad\desktop\BestRestaurants.Solution\BestRestaurants\obj\Debug\netcoreapp2.2\BestRestaurants.Views.pdb
 C:\Users\ThinkPad\desktop\BestRestaurants.Solution\BestRestaurants\obj\Debug\netcoreapp2.2\BestRestaurants.csproj.CopyComplete
+C:\Users\ThinkPad\desktop\BestRestaurants.Solution\BestRestaurants\obj\Debug\netcoreapp2.2\Razor\Views\Restaurants\AddCuisine.g.cshtml.cs
