@@ -35,38 +35,46 @@ namespace BestRestaurants.Controllers
         .FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
+    public ActionResult Create()
+    {
+      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
+      return View();
+    }
+        [HttpPost]
+    public ActionResult Create(Restaurant restaurant)
+    {
+      _db.Restaurants.Add(restaurant);
+      if (CuisineId != 0)
+      {
+        _db.CuisineRestaurant.Add(new CuisineRestaurant() { CuisineId = CuisineId, RestaurantId = restaurant.RestaurantId });
+      }
+      _db.SaveChanges();
+      return RedirectToAction("Index");
     
+    }
+    public ActionResult Edit(int id)
+    {
+        var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+        ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name";)
+
+        return View(thisRestaurant);
+    }
+
+    [HttpPost]
+    public ActionResult Edit(Restaurant restaurant)
+    {
+      _db.Entry(restaurant).State = EntityState.Modified;
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
-//     public ActionResult Create()
-//     {
-//       ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
-//       return View();
-//     }
 
-//     [HttpPost]
-//     public ActionResult Create(Restaurant restaurant)
-//     {
-//       _db.Restaurants.Add(restaurant);
-//       _db.SaveChanges();
-//       return RedirectToAction("Index");
-//     }
+
+
 
 
     
-//     public ActionResult Edit(int id)
-//     {
-//         var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
-//         return View(thisRestaurant);
-//     }
-
-//     [HttpPost]
-//     public ActionResult Edit(Restaurant restaurant)
-//     {
-//       _db.Entry(restaurant).State = EntityState.Modified;
-//       _db.SaveChanges();
-//       return RedirectToAction("Index");
-//     }
 
 //   public ActionResult Delete(int id)
 //   {

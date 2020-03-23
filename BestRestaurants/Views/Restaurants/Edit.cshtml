@@ -1,10 +1,10 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 @model BestRestaurants.Models.Restaurant
 <h2>Edit</h2>
 
-<h4>Edit this restaurant: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit this Restaurant: @Html.DisplayFor(model => model.Description)</h4>
 
 @using (@Html.BeginForm())
 {
@@ -20,4 +20,4 @@
   <input type = "submit" value="Save" />
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p> *@
+<p>@Html.ActionLink("Back to list", "Index")</p>

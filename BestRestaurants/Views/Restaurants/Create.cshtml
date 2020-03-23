@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -24,13 +24,14 @@
             @Html.TextBoxFor(model => model.Description, new{ @class="form-control"})
           </div>
           <div class="dropdown">
-            @Html.LabelFor(model => model.Cuisine)
+            @Html.Label("Select cuisine")
             @Html.DropDownList("CuisineId")
           </div>
 
           <button class="btn btn-light" type="submit">Add</button>
         }
+        <p>@Html.ActionLink("Show all restaurants", "Index")</p>
       </div>
     </div>
   </div>
-</div> *@
+</div>

@@ -21,7 +21,13 @@
           <p>This restaurant does not belong to any cuisines</p>
         }
         else{
-          <h4>Cuisines the restaurant belongs t</h4>
+          <h4>Cuisines the restaurant serves:</h4>
+            <ul>
+              @foreach(var join in Model.Cuisines)
+              {
+                <li>@join.Cuisine.Name</li>
+              }
+            </ul>
         }
 
         <p>@Html.ActionLink("Back to List", "Index")</p>
