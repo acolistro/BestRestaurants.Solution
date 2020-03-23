@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -16,10 +16,15 @@
         {
           <p>No restaurants of this cuisine type.</p>
         }
-
-        @foreach (Restaurant restaurant in @Model.Restaurants)
+        else 
         {
-          <p>@Html.ActionLink($"{restaurant.Name}", "Details", "Restaurants", new { id = restaurant.RestaurantId })</p>
+          <h4>Restaurants that serve this cuisine:</h4>
+          <ul>
+          @foreach (var join in Model.Restaurants)
+          {
+              <li>@join.Restaurant.Name</li>
+          }
+          </ul>
         }
 
         <hr/>
@@ -30,4 +35,4 @@
       </div>
     </div>
   </div>
-</div> *@
+</div>
