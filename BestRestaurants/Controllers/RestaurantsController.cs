@@ -61,11 +61,22 @@ namespace BestRestaurants.Controllers
     }
 
     [HttpPost]
-    public ActionResult Edit(Restaurant restaurant)
+    public ActionResult Edit(Restaurant restaurant, int CuisineId)
     {
+      if (CuisineId != 0)
+      {
+        _db.CuisineRestaurant.Add(new CuisineRestaurant() { CuisineId = CuisineId, RestaurantId = restaurant.RestaurantId })
+      }
+      
       _db.Entry(restaurant).State = EntityState.Modified;
       _db.SaveChanges();
       return RedirectToAction("Index");
+    }
+    public ActionResult AddCuisine(int id)
+    {
+      var thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+      ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
+      return View(thisRestaurant);
     }
   }
 }
