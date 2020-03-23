@@ -78,6 +78,16 @@ namespace BestRestaurants.Controllers
       ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
       return View(thisRestaurant);
     }
+    [HttpPost]
+    public ActionResult AddCuisine(Item item, int CuisineId)
+    {
+        if (CuisineId != 0)
+        {
+        _db.CuisineRestaurant.Add(new CuisineRestaurant() { CuisineId = CuisineId, RestaurantId = restaurant.RestaurantId });
+        }
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+    }
   }
 }
 
