@@ -1,29 +1,43 @@
-// using Microsoft.AspNetCore.Mvc;
-// using BestRestaurants.Models;
-// using System.Collections.Generic;
-// using System.Linq;
-// using Microsoft.AspNetCore.Mvc.Rendering;
-// using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using BestRestaurants.Models;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
-// namespace BestRestaurants.Controllers
-// {
-//   public class RestaurantsController : Controller
-//   {
-//     private readonly BestRestaurantsContext _db;
+namespace BestRestaurants.Controllers
+{
+  public class RestaurantsController : Controller
+  {
+    private readonly BestRestaurantsContext _db;
 
-//     public RestaurantsController(BestRestaurantsContext db)
-//     {
-//       _db = db;
-//     }
+    public RestaurantsController(BestRestaurantsContext db)
+    {
+      _db = db;
+    }
+    
 
-//     public ActionResult Index()
-//     {
-//       List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.Cuisine).ToList();
-//       return View(model);
+    public ActionResult Index()
+    {
+      // List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.Cuisine).ToList();
+      // return View(model);
 
-//       // List<Restaurant> model = _db.Restaurants.ToList();
-//       // return View(model);
-//     }
+      // List<Restaurant> model = _db.Restaurants.ToList();
+      // return View(model);
+      return View(_db.Restaurants.ToList());
+    }
+    
+    public ActionResult Details(int id)
+    {
+      var thisRestaurant = _db.Restaurants
+        .Include(restaurant => restaurant.Cuisines)
+        .ThenInclude(join => join.Cuisine)
+        .FirstOrDefault(restaurant => restaurant.RestaurantId == id);
+      return View(thisRestaurant);
+    }
+    
+  }
+}
 //     public ActionResult Create()
 //     {
 //       ViewBag.CuisineId = new SelectList(_db.Cuisines, "CuisineId", "Name");
@@ -38,11 +52,7 @@
 //       return RedirectToAction("Index");
 //     }
 
-//     public ActionResult Details(int id)
-//     {
-//       Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
-//       return View(thisRestaurant);
-//     }
+
     
 //     public ActionResult Edit(int id)
 //     {

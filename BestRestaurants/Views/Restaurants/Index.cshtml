@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -20,7 +20,7 @@
           <ul>
             @foreach(Restaurant restaurant in Model)
             {
-                <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) | @restaurant.Cuisine.Name</li>
+                <li>@Html.ActionLink($"{restaurant.Name}", "Details", new { id = restaurant.RestaurantId }) </li>
             }
 
             <hr/>
@@ -32,4 +32,4 @@
         </div>
       </div>
     </div>
-  </div>         *@
+  </div>        

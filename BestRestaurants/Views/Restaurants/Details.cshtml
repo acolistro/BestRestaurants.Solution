@@ -1,4 +1,4 @@
-@* @{
+@{
   Layout = "_Layout";
 }
 
@@ -13,8 +13,16 @@
         <hr />
 
         <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<p>
-        @* <h4>@Html.DisplayNameFor(model => model.Category): @Html.DisplayFor(model => model.Category)</h4>
+        @* <h4>@Html.DisplayNameFor(model => model.Cui): @Html.DisplayFor(model => model.Category)</h4> *@
         <p>@Html.DisplayNameFor(model => model.Rating): @Html.DisplayFor(model => model.Rating)</p>
+
+        @if(@Model.Cuisines.Count == 0)
+        {
+          <p>This restaurant does not belong to any cuisines</p>
+        }
+        else{
+          <h4>Cuisines the restaurant belongs t</h4>
+        }
 
         <p>@Html.ActionLink("Back to List", "Index")</p>
         <p>@Html.ActionLink("Edit This Restaurant", "Edit", new { id = Model.RestaurantId })</p>
@@ -23,4 +31,4 @@
       </div>
     </div>
   </div>
-</div> *@
+</div>
